@@ -10,8 +10,20 @@ function App() {
   const [counter, setCounter] = useState(15)
 
 function counterUp(){
-  if(counter == 20) return;
-  setCounter(counter + 1);
+  if(counter >= 20) return;
+  // setCounter(counter + 1);
+
+  // This will return only +1 as the react fiber perform task in bundle due to which it avoids same thing
+  // setCounter(counter + 1);
+  // setCounter(counter + 1);
+  // setCounter(counter + 1);
+  // setCounter(counter + 1);
+
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+  setCounter(prevCounter => prevCounter + 1);
+
   console.log(counter);
 }
 
