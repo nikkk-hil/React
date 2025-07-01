@@ -5,6 +5,7 @@ function Login() {
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
+    //Accessing setUser from context object
     const {setUser} = React.useContext(UserContext);
 
     // console.log(setUser)

@@ -7,6 +7,7 @@ function App() {
 
   return (
     <>
+      {/* providing children to UserContextProvider */}
       <UserContextProvider>
         <Login />
         <br />
